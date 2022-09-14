@@ -8,7 +8,7 @@ public class BonusServiceTest {
 
     @ParameterizedTest
     @CsvFileSource(resources = "/data.csv")
-    public void testShouldCalculateForRegisteredAndUnderLimit(String nameTest, int expectedBonus, int amount, boolean registered) {
+    public void testShouldCalculate(String nameTest, int expectedBonus, int amount, boolean registered) {
         BonusService service = new BonusService();
 
         int actualBonus = service.calculate(amount, registered);
